@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @sample.name
+%p
+  %b Content:
+  = @sample.content
+%p
+  %b Quantity:
+  = @sample.quantity
+%p
+  %b Price:
+  = @sample.price
+
+= link_to 'Edit', edit_sample_path(@sample)
+\|
+= link_to 'Back', samples_path

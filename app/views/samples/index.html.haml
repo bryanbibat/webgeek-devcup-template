@@ -1,0 +1,26 @@
+%h1 Listing samples
+
+%table.table.table-striped
+  %tr
+    %th Name
+    %th Content
+    %th Quantity
+    %th Price
+    %th
+
+  - @samples.each do |sample|
+    %tr
+      %td= sample.name
+      %td= simple_format sample.content
+      %td= sample.quantity
+      %td= sample.price
+      %td
+        = link_to 'Show', sample
+        = link_to 'Edit', edit_sample_path(sample)
+        = link_to 'Destroy', sample, :confirm => 'Are you sure?', :method => :delete
+
+= paginate @samples
+
+%br
+
+= link_to 'New Sample', new_sample_path
