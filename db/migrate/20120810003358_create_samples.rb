@@ -4,7 +4,7 @@ class CreateSamples < ActiveRecord::Migration
       t.string :name
       t.text :content
       t.integer :quantity
-      t.decimal :price, scale: 10, precision: 2
+      t.decimal :price, scale: 2, precision: 10
 
       t.timestamps
     end
